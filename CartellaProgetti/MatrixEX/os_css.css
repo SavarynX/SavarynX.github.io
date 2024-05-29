@@ -1,0 +1,55 @@
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*-------------------------------------------------------*/
+.secret{
+  color: #f5f8fa;
+  text-align: center;
+  font-size: large;
+}
+.matrix{
+  background-color: black;
+  padding: 8px;
+}
+.p1{
+  background-image: url('imgg/MatrixBg.jpg');
+  color: #FFF; /* Imposta il colore del testo */
+  padding: 12px;
+  padding-top: 180px;
+}
+.p2{
+  background-image: url('imgg/MatrixBg.jpg');
+  color: #FFF; /* Imposta il colore del testo */
+  padding: 12px;
+}
+/*-------------------------------------------------------*/
+.op{
+  text-align: center;
+  size: 100%;
+  display: block;
+  margin: 0 auto;
+}
+/*-------------------------------------------------------*/
+.float{
+  align-items: last baseline;
+  float: right;
+}
+.navbar {
+    margin: 2px;
+    padding: 12px;
+    background-color: #333;
+    display: flex;
+    padding: 14px 16px;
+    
+  }
+  .navbar2 {
+    margin: 2px;
+    padding: 12px;
+    background-color: #333;
+    display: table;
+    text-align: right;
+    padding: 14px 16px;
+  }
+  /*-------------------------------------------------------*/

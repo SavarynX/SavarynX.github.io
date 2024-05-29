@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widthv">
+    <title>One Piece Fan-Made Site</title>
+
+    <!-- Includi il foglio di stile di Bootstrap CSS -->
+    <link rel="stylesheet" href="mycss.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <h1>Spoiler</h1>
+            </header>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="frutti.html">Frutti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="teorie.html">Teorie</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link">Spoiler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="personaggi.html">Personaggi</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <p>Clicca sul pulsante per visualizzare il contenuto spoiler:</p>
+    <button onclick="showSpoiler()">Mostra Spoiler</button>
+
+    <!-- Avviso spoiler -->
+    <div id="spoiler-alert">
+        <div id="spoiler-content">
+            <p><ul>
+                <li>Monkey D. Dragon salva Luffy a Loguetown</li>
+                <li>La ciurma di cappello di paglia viene divisa a Saboudi</li>
+                <li>Ace è il figlio di Gol D. Roger</li>
+                <li>Ace e Barbabianca muoiono a Marineford</li>
+                <li>Barbanera può usare 2 frutti del diavolo</li>
+                <li>Sabo è ancora vivo e mangia il frutto Mera Mera</li>
+                <li>Luffy può usare il Gear 4th e il Gear 5th</li>
+                <li>Trafalgar Law fa parte della famiglia della D </li>
+                <li>Luffy batte Kaido e Law con Kid battono Big Mom</li>
+                <li>Luffy diventa uno dei 4 imperatori del mare</li>
+            </ul></p>
+            <p> <span id="close-spoiler" onclick="hideSpoiler()">Clicca qui per nascondere</span> </p>
+        </div>
+    </div>
+
+    </main>
+
+    <footer>
+        <div class="row">
+            <div class="col-10">
+                <p style="padding-top: 18px;">&copy; 2023 SavarynX</p>
+            </div>
+            <div class="col-2">
+                <img src="img/One_Piece_B&W_Logo.png" alt="BW_logo" width="160px" height="60px">
+            </div>
+        </div>
+        </footer>
+    </div>
+
+    <!-- jQuery, Popper.js e Bootstrap JS -->
+    <script>
+        function showSpoiler() {
+            document.getElementById('spoiler-alert').style.display = 'flex';
+        }
+
+        function hideSpoiler() {
+            document.getElementById('spoiler-alert').style.display = 'none';
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
