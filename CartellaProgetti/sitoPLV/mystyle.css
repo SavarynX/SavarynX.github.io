@@ -51,13 +51,13 @@ main {
 }
 
 .navbarz {
-    margin-top: 30px;
+    margin-top: 21px;
 }
 
 .hero {
     background-color: #007bff;
     color: #fff;
-    padding: 80px 0;
+    padding: 80px;
     text-align: center;
 }
 
