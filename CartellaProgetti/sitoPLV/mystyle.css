@@ -126,5 +126,14 @@ footer {
     text-align: center;
 }
 
+.ricezione {
+    position: absolute;
+    padding: 4px;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    margin-top: -30%;
+    margin-left: 80%;
+}
+
 
 
