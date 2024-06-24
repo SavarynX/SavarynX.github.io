@@ -26,6 +26,10 @@ header h1 {
     float: left;
 }
 
+.img-plv {
+    -webkit-box-reflect: below -17px linear-gradient(transparent 80%, #ffffff);
+}
+
 nav ul {
     float: right;
     list-style: none;
