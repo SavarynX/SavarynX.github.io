@@ -4,33 +4,267 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="This is my 'curriculum vitae'! (which means something in latin.. i guess...)" />
+    <meta name="description" content="Professional CV of Ostap Savaryn - Computer Science Student & Developer" />
     <meta name="author" content="Ostap Savaryn" />
-    <!-- TITOLO -->
-    <title>MyCV - Ostap Savaryn</title>
+    <title>Ostap Savaryn | CV Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
-        type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --dark-color: #1a252f;
+            --light-color: #ecf0f1;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            background-image: linear-gradient(to bottom, rgba(245,245,245,0.8), rgba(245,245,245,0.8)), url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+        
+        #sideNav {
+            background: var(--dark-color);
+            background-image: linear-gradient(rgba(26, 37, 47, 0.9), rgba(26, 37, 47, 0.9)), url('https://www.transparenttextures.com/patterns/dark-geometric.png');
+            box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        }
+        
+        #sideNav .navbar-brand .img-profile {
+            border: 5px solid var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        #sideNav .navbar-brand .img-profile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        
+        .navbar-nav .nav-item .nav-link {
+            color: rgba(255,255,255,0.8);
+            font-weight: 600;
+            margin: 0.5rem 0;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .navbar-nav .nav-item .nav-link:hover {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            transform: translateX(5px);
+        }
+        
+        .navbar-nav .nav-item .nav-link:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--secondary-color);
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .navbar-nav .nav-item .nav-link:hover:before {
+            visibility: visible;
+            width: 100%;
+        }
+        
+        .resume-section {
+            padding: 5rem 3rem;
+            background: white;
+            margin: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resume-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary-color);
+        }
+        
+        .resume-section-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .text-primary {
+            color: var(--secondary-color) !important;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: var(--dark-color);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .social-icons a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .subheading {
+            font-weight: 600;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        .flex-grow-1 {
+            border-left: 3px solid var(--light-color);
+            padding-left: 1.5rem;
+        }
+        
+        .flex-shrink-0 span {
+            background: var(--light-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            color: var(--primary-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .dev-icons {
+            font-size: 3rem;
+        }
+        
+        .dev-icons .list-inline-item {
+            margin: 0 1rem 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .dev-icons .list-inline-item:hover {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        
+        .fa-ul {
+            margin-left: 3rem;
+        }
+        
+        .fa-ul li {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .fa-li {
+            left: -2.5rem;
+            color: var(--secondary-color);
+        }
+        
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: var(--dark-color);
+            background-image: linear-gradient(rgba(26, 37, 47, 0.9), rgba(26, 37, 47, 0.9)), url('https://www.transparenttextures.com/patterns/dark-geometric.png');
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        /* Animation classes */
+        .animate-pop-in {
+            animation: popIn 0.6s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+            opacity: 0;
+        }
+        
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .resume-section {
+                padding: 3rem 1.5rem;
+                margin: 1rem 0;
+            }
+            
+            #sideNav {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+            
+            #sideNav .navbar-brand {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body id="page-top">
     <main>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Ostap Savaryn</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-3"
-                        src="assets/img/img.jfif" alt="..." /></span>
+                <span class="d-none d-lg-block">
+                    <img class="img-fluid img-profile rounded-circle mx-auto mb-3" 
+                         src="assets/img/img.jfif" 
+                         alt="Ostap Savaryn Profile Picture" />
+                </span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                    class="navbar-toggler-icon"></span></button>
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
@@ -43,211 +277,287 @@
             </div>
         </nav>
 
-        <!-- Page Content-->
+        <!-- Page Content -->
         <div class="container-fluid p-0">
-            <!-- About-->
-            <section class="resume-section" id="about">
+            <!-- About Section -->
+            <section class="resume-section animate-pop-in" style="animation-delay: 0.1s" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
                         Ostap
                         <span class="text-primary">Savaryn</span>
                     </h1>
-                    <div class="subheading mb-5">
+                    <div class="subheading mb-4">
                         25-08-2006 · Via Donato Bramante, 85100 · (+39) 377 3377 250 ·
-                        <a href="mailto:name@email.com">savarynostap09@gmail.com</a>
+                        <a href="mailto:savarynostap09@gmail.com">savarynostap09@gmail.com</a>
                     </div>
-                    <p class="lead mb-5">I am an intelligent, shrewd and serious guy; I am looking for employment in
+                    <p class="lead mb-4">
+                        I am an intelligent, shrewd and serious guy; I am looking for employment in
                         need of ideas and solutions, to which I am ready to give my best to feel fulfilled as a
-                        programmer and realize the company.</p>
+                        programmer and realize the company.
+                    </p>
                     <div class="social-icons">
-                        <a class="social-icon" href="https://www.instagram.com/zefferino_?igsh=dnhoeHJ2Zzd2OTBw"><i
-                                class="fab fa-instagram"></i></a>
-                        <a class="social-icon" href="https://github.com/SavarynX/SavarynX.github.io"><i
-                                class="fab fa-github"></i></a>
+                        <a class="social-icon" href="https://www.instagram.com/zefferino_?igsh=dnhoeHJ2Zzd2OTBw" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="social-icon" href="https://github.com/SavarynX/SavarynX.github.io" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
             </section>
 
             <hr class="m-0" />
 
-            <!-- Experience-->
-            <section class="resume-section" id="experience">
+            <!-- Experience Section -->
+            <section class="resume-section animate-pop-in" style="animation-delay: 0.2s" id="experience">
                 <div class="resume-section-content">
-                    <!-- title -->
-                    <h2 class="mb-5">Experience & Project</h2>
-                    <!-- prima -->
+                    <h2 class="mb-5">Experience & Projects</h2>
+                    
+                    <!-- Unity Game -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Unity videogame</h3>
-                            <div class="subheading mb-3"><a
-                                    href="https://youtu.be/3DeBfjsitcU?si=qwtdSQp0102SvA0r">Learning maze</a></div>
+                            <h3 class="mb-0">Unity Videogame</h3>
+                            <div class="subheading mb-3">
+                                <a href="https://youtu.be/3DeBfjsitcU?si=qwtdSQp0102SvA0r" target="_blank">Learning Maze</a>
+                            </div>
                             <p>Informatica x gioco = fantasia + regole</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">November 2023 - April 2024</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">November 2023 - April 2024</span>
+                        </div>
                     </div>
-                    <!-- seconda web sites -->
-                    <h3 class="mb-0">Web sites</h3>
+                    
+                    <!-- Web Projects Section -->
+                    <h3 class="mb-3">Web Development Projects</h3>
+                    
+                    <!-- Volleyball Rotations -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            
-                            <div class="subheading mb-3"><a href="CartellaProgetti/sitoPLV/index.html">Rotazioni
-                                    pallavolo</a></div>
+                            <div class="subheading mb-3">
+                                <a href="CartellaProgetti/sitoPLV/index.html" target="_blank">Rotazioni Pallavolo</a>
+                            </div>
                             <p>Volleyball rotations web site for those who don't know them yet</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2024</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">June 2024</span>
+                        </div>
                     </div>
-                    <!-- terza -->
+                    
+                    <!-- Hanoi Towers -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <div class="subheading mb-3"><a href="CartellaProgetti/honionTower/hanoi.html">Torri di
-                                    honion</a></div>
+                            <div class="subheading mb-3">
+                                <a href="CartellaProgetti/honionTower/hanoi.html" target="_blank">Torri di Hanoi</a>
+                            </div>
                             <p>Hanoi's towers game website with some personalization</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">Febraury 2024</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">February 2024</span>
+                        </div>
                     </div>
-                    <!-- quarta -->
+                    
+                    <!-- Matrix Error -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <div class="subheading mb-3"><a href="CartellaProgetti/MatrixEX/compito.html">Errore:
-                                    Matrix</a></div>
+                            <div class="subheading mb-3">
+                                <a href="CartellaProgetti/MatrixEX/compito.html" target="_blank">Errore: Matrix</a>
+                            </div>
                             <p>First goliardic and random site</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">December 2023</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">December 2023</span>
+                        </div>
                     </div>
-                    <!-- quinta -->
+                    
+                    <!-- One Piece -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <div class="subheading mb-3"><a href="CartellaProgetti/OnePieceSite/main.html">One Piece
-                                    mini fan "wiki"</a></div>
+                            <div class="subheading mb-3">
+                                <a href="CartellaProgetti/OnePieceSite/main.html" target="_blank">One Piece Mini Fan "Wiki"</a>
+                            </div>
                             <p>Another site for.. one piece.. well that's obvious</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">January 2024</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">January 2024</span>
+                        </div>
                     </div>
-                    <!-- sesta -->
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                    
+                    <!-- Java App -->
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">Java app</h3>
-                            <div class="subheading mb-3"><a
-                                    href="https://github.com/SavarynX/Informatica_4N_os/files/15444130/release1.0.zips">Tele-automazione</a>
+                            <h3 class="mb-0">Java Application</h3>
+                            <div class="subheading mb-3">
+                                <a href="https://github.com/SavarynX/Informatica_4N_os/files/15444130/release1.0.zips" target="_blank">Tele-automazione</a>
                             </div>
                             <p>App for creating graphic circuit for telecommunications</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">January 2024</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">January 2024</span>
+                        </div>
                     </div>
-                    <!-- settima -->
+                    
+                    <!-- PHP Site -->
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
-                            <h3 class="mt-0">PHP sites</h3>
-                            <div class="subheading mb-3"><a
-                                    href="http://savaryn5n.altervista.org/metodo_get/GET/index.html">Spotifai</a>
+                            <h3 class="mb-0">PHP Web Application</h3>
+                            <div class="subheading mb-3">
+                                <a href="http://savaryn5n.altervista.org/metodo_get/GET/index.html" target="_blank">Spotifai</a>
                             </div>
-                            <p>Maybe an actually useless app 'cause it has 20 songs among what you can search (to upgrade with database) </p>
+                            <p>Maybe an actually useless app 'cause it has 20 songs among what you can search (to upgrade with database)</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">October 2024</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">October 2024</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <hr class="m-0" />
 
-            <!-- Education-->
-            <section class="resume-section" id="education">
+            <!-- Education Section -->
+            <section class="resume-section animate-pop-in" style="animation-delay: 0.3s" id="education">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Education</h2>
+                    
+                    <!-- Current School -->
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">IIS "Einstein-De Lorenzo"</h3>
-                            <div class="subheading mb-3">degree in computer science</div>
+                            <div class="subheading mb-3">Degree in Computer Science</div>
                             <div>4° year - working towards it</div>
                             <p>Media: 6.99</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2020 - Today</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">September 2020 - Today</span>
+                        </div>
                     </div>
+                    
+                    <!-- Middle School -->
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Istituto Comprensivo Satriano di Lucania</h3>
-                            <div class="subheading mb-3">Middle school degree</div>
+                            <div class="subheading mb-3">Middle School Degree</div>
                             <p>Voto: 7</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2017 - June 2020</span></div>
+                        <div class="flex-shrink-0">
+                            <span class="text-primary">September 2017 - June 2020</span>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <hr class="m-0" />
 
-            <!-- Skills-->
-            <section class="resume-section" id="skills">
+            <!-- Skills Section -->
+            <section class="resume-section animate-pop-in" style="animation-delay: 0.4s" id="skills">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Skills</h2>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-java"></i></li>
-                        <li class="list-inline-item"><i class="fab fa-unity"></i></li>
-                        <li class="list-inline-item"><i class="fa-solid fa-c"></i></li>
-                        <li class="list-inline-item">C++</li>
+                        <li class="list-inline-item" title="HTML5"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item" title="CSS3"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item" title="JavaScript"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item" title="Java"><i class="fab fa-java"></i></li>
+                        <li class="list-inline-item" title="Unity"><i class="fab fa-unity"></i></li>
+                        <li class="list-inline-item" title="C"><i class="fa-solid fa-c"></i></li>
+                        <li class="list-inline-item" title="C++">C++</li>
                     </ul>
-
-                    <!-- Interests-->
-                    <section class="resume-section" id="interests">
-                        <div class="resume-section-content">
-                            <h2 class="mb-5">Interests</h2>
-                            <p>Apart from being an informatic student, I enjoy most of my time playing videogames, alone
-                                or with my friends. I am a pallavolist, i play U19 in Potenza volleyball team "Murate".
-                            </p>
-                            <p>During the warmer months here in Basilicata, I enjoy going to my grandma contryside with
-                                the family and playing beach volley always in Potenza.</p>
-                            <p class="mb-0">When indoors, I follow a number of anime and fantascience genre movies and
-                                some shows, i'm reading a couple manga. I spend my free time with my friends online or
-                                my real life friends outside. </p>
-                        </div>
-                    </section>
-
-                    <hr class="m-0" />
-
-                    <!-- Awards-->
-                    <section class="resume-section" id="awards">
-                        <div class="resume-section-content">
-                            <h2 class="mb-5">Awards & Certifications</h2>
-                            <ul class="fa-ul mb-0">
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                                    CCNA Certification - May 2024
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                                    IT Essential Certification - June 2024
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                                    Asimov Award - April 2024
-                                </li>
-                                <li>
-                                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                                    Certamen Debate Award - April 2024
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
                 </div>
+            </section>
+
+            <!-- Interests Section -->
+            <section class="resume-section animate-pop-in" style="animation-delay: 0.5s" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>
+                        Apart from being an informatic student, I enjoy most of my time playing videogames, alone
+                        or with my friends. I am a pallavolist, I play U19 in Potenza volleyball team "Murate".
+                    </p>
+                    <p>
+                        During the warmer months here in Basilicata, I enjoy going to my grandma's countryside with
+                        the family and playing beach volley always in Potenza.
+                    </p>
+                    <p class="mb-0">
+                        When indoors, I follow a number of anime and fantascience genre movies and
+                        some shows, I'm reading a couple manga. I spend my free time with my friends online or
+                        my real life friends outside.
+                    </p>
+                </div>
+            </section>
+
+            <hr class="m-0" />
+
+            <!-- Awards Section -->
+            <section class="resume-section animate-pop-in" style="animation-delay: 0.6s" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            CCNA Certification - May 2024
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            IT Essential Certification - June 2024
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Asimov Award - April 2024
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Certamen Debate Award - April 2024
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
-    <footer class="footer bg-dark text-white">
-        <!-- Pedice -->
+    
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <p class="p-2">&copy; 2024 SavarynX</p>
+                    <p class="p-2">&copy; 2024 Ostap Savaryn. All rights reserved.</p>
                 </div>
             </div>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
     </footer>
+
+    <!-- Bootstrap core JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add animation class when elements come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-pop-in');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if(elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
 </body>
 
 </html>
